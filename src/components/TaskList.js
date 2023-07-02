@@ -1,13 +1,16 @@
 import React from 'react'
+import PreviousTask from './PreviousTask'
 
-function TaskList() {
+function TaskList(props) {
+
+// list.map(val=>{
+//     console.log(val.name)
+// })
   return (
-    <div>
-       <li>shopping</li>
-      <li>studying</li>
-      <li>wash clothes</li>
-      <li>planting</li>
-    </div>
+   <div>
+   <PreviousTask list={props.taskMentioned}/>
+   
+   </div>
   )
 }
 

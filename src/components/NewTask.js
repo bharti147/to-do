@@ -14,7 +14,16 @@ function NewTask() {
  const newtaskHandler = (event) =>{
     event.preventDefault();
     alert(taskName);
-    setTaskName();
+    const taskData = {
+        task: enteredTitle,
+       
+      };
+  
+      props.onSaveExpenseData(expenseData);
+      setEnteredTitle('');
+      setEnteredAmount('');
+      setEnteredDate('');
+
 
 
  }
@@ -26,7 +35,7 @@ function NewTask() {
 
   <div className='task'>
   <label >TaskName</label>
-    <input type="text" onChange={taskNameHandler}></input>
+    <input type="text" onChange={taskNameHandler} value={task}></input>
 </div>
 {/* <div className='task'>
     <label>DATE</label>
