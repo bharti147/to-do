@@ -5,8 +5,15 @@ import './App.css'
 function App() {
 
   const [task,setTask]=useState([]);
-  const addTask = (inputText)=>{
+  let addTask = (inputText)=>{
+    if(inputText !== '')
     setTask([...task,inputText]);
+  }
+
+  const removeTask = (key) =>{
+   const newList=[...task];
+   newList.splice(key,1);
+   setTask([...newList]);
   }
   
   return (
@@ -17,8 +24,12 @@ function App() {
    <hr/>
    <br/>
     {task.map((val,i)=>{
+      
       return(
-       <TaskList item={val}/>
+       <TaskList deleteTask={removeTask} key={i} item={val}
+        index={i}
+       />
+
       )
     
     })}
