@@ -1,0 +1,10 @@
+.tasklist{
+    background-color: rgb(228, 231, 233);
+    border: 1px solid rgb(120, 116, 116);
+    border-radius: 5px;
+    margin:30px 0px ;
+    padding: 20px;
+    color: rgb(25, 24, 24);
+    font-size: 20px;
+    list-style: none;
+}
